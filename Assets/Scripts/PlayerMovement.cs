@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         float yaw = turnSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
         float pitch = turnSpeed * Time.deltaTime * Input.GetAxis("Pitch");
         float roll = turnSpeed * Time.deltaTime * Input.GetAxis("Roll");
-        transform.Rotate(-pitch, yaw, -roll);
+        transform.Rotate(pitch, yaw, -roll);
+        
     }
 }

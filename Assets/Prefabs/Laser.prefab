@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 656200767526569714}
   - component: {fileID: 4330836071638989254}
   - component: {fileID: 5615296755032486140}
-  - component: {fileID: 4313921365993043748}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2471834889707525571}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 2, z: 0.02}
+  m_LocalScale: {x: 0.05, y: 2, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8051741890375470447}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &656200767526569714
 MeshFilter:
@@ -93,34 +92,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2471834889707525571}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &4313921365993043748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2471834889707525571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eec614341533b3b49b3b1e12f70628f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LaserSpeed: 5
 --- !u!1 &5415873023714055840
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8051741890375470447}
+  - component: {fileID: 6791668434058341609}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -144,7 +122,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5415873023714055840}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -9.3127894e-10, z: -9.223282e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -152,4 +129,18 @@ Transform:
   m_Children:
   - {fileID: 8861643662516060976}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &6791668434058341609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415873023714055840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec614341533b3b49b3b1e12f70628f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaserSpeed: 3

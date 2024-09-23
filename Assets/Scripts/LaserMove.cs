@@ -6,8 +6,9 @@ using UnityEngine;
 public class LaserMove : MonoBehaviour
 {
     public float LaserSpeed = 5f;
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.Translate(transform.forward * LaserSpeed * Time.deltaTime);
+        //transform.Translate(transform.up * LaserSpeed);
+        transform.localPosition += transform.up * LaserSpeed;
     }
 }
