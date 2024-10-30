@@ -8,11 +8,11 @@ public class AsteroidManager : MonoBehaviour
     [SerializeField] Asteroid asteroid;
     [SerializeField] int gridSpacing = 50;
 
-    void Start()
+    private void Start()
     {
         PlaceAsteroids();
     }
-    void PlaceAsteroids()
+    private void PlaceAsteroids()
     {
         for (int x = 0; x < numberOfAsteroids; x++)
         {
@@ -25,7 +25,7 @@ public class AsteroidManager : MonoBehaviour
             }
         }
     }
-    void InstantiateAsteroid(int x, int y, int z)
+    private void InstantiateAsteroid(int x, int y, int z)
     {
         Instantiate(asteroid, 
             new Vector3( transform.position.x + (x * gridSpacing) + AsteroidOffset(), 
@@ -34,7 +34,7 @@ public class AsteroidManager : MonoBehaviour
             Quaternion.identity, 
             transform);
     }
-    float AsteroidOffset()
+    private float AsteroidOffset()
     {
         return Random.Range(-gridSpacing / 2f, gridSpacing / 2f);
     }
