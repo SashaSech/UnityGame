@@ -23,8 +23,9 @@ public class EnemyShooting : MonoBehaviour
     {
         if (player == null)
             return;
-        transform.LookAt(player);
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.LookAt(player.transform);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //transform.position += transform.forward * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider collision)
